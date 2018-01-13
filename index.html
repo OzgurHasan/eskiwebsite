@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Maltepe Makers</title>
+  <link rel="icon" href="img/maker logo.PNG">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script>
+
+<!----- JQUERY SCROLL NAVIGASYON--->
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY TIKLANDIGINDA YAZIYI "ACTIVE" YAPAR--->
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+</head>
+<body>
+  <header id="header">
+    <div class="content">
+      <div id="logo"><a href="#"><img src="img/maker logo.PNG" width=75px height=50px></img></a></div>
+      <nav id="nav">
+        <div id="parent">
+          <ul>
+            <li><a href="#sec1" title="Ekibimiz">Ekibimiz</a></li>
+            <li><a href="#sec2" title="Projelerimiz">Projelerimiz</a></li>
+            <li><a href="desteklenen.html" title="Desteklediğimiz Projeler">Desteklediğimiz Projeler</a></li>
+            <li><a href="#sec4" title="İletişim">İletişim</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<!--merhaba, ben websiteyi yazan öğrenci. bana ödeme yapılmıyor. yardım gönderin-->
+
+  <div id="sec1" class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Maltepe Makers
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-light" id="ekipcontainer">
+    <nav id="ekip">
+    <h2><a href="ekibimiz.html">Ekibimiz</a></h2>
+      <img src="img/Ekibimiz/Yönetim Kurulu PNG/baran salık.png" width=345,6 height=230,4 id="baran" title="Baran Salık"></img>
+      <img src="img/Ekibimiz/Yönetim Kurulu PNG/aslı hoca.png" width=345,6 height=230,4 id="asli" title="Aslı Çakmak"></img>
+      <img src="img/Ekibimiz/Yönetim Kurulu PNG/barış poyraz.png" width=345,6 height=230,4 id="baris" title="Barış Poyraz"></img>
+      <img src="img/Ekibimiz/Yönetim Kurulu PNG/sefa vural.png" width=345,6 height=230,4 id="seda" title="Sefa Vural"></img>
+      <img src="img/Ekibimiz/Yönetim Kurulu PNG/ipek metin.png" width=345,6 height=230,4 id="ipek" title="İpek Metin"></img>
+    </nav>
+  </section>
+
+  <div id="sec2" class="pimg2">
+    <div class="ptext">
+      <span class="border">
+        Projelerimiz
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-dark" id="projecontainer">
+    <nav id="proje">
+      <h2>Projelerimiz</h2>
+      <a href="makerfaire.html"><img src="img/projeler/maker pasta.jpg" width=320 height=299,8 title="School Maker Faire" id="makerfr"></img></a>
+      <a href="erasmusp.html"><img src="img/projeler/erasmusplus.jpg" width=320 height=299,8 title="Erasmus+" id="erasmusp"></img></a>
+      <a href="frc_offs.html"><img src="img/projeler/frc offseason.jpg" width=320 height=299,8 title="FRC Offseason" id="frcoffs"></img></a>
+      <a href="harezmi.html"><img src="img/projeler/harezmi.jpg" width=320 height=299,8 title="Harezmi Pilot Proje" id="harezmi"></img></a>
+      <a href="frc_oc.html"><img src="img/projeler/frc oc.jpg" width=320 height=299,8 title="FRC Open County" id="frcoc"></img></a>
+    </nav>
+  </section>
+
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        maltepemakers@gmail.com
+      </span>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="container" id="sec4">
+      <div class="social"><a href="https://tr-tr.facebook.com/maltepemakers/" title="Maltepe Makers Facebook"><img src="img/facebook.png" width="50" height="50" id="facebook"></img></a></div>
+      <div class="social"><a href="https://twitter.com/maltepemaker" title="Maltepe Makers Twitter"><img src="img/twitter.png" width="50" height="50" id="twitter"></img></a></div>
+      <div class="social"><a href="https://www.instagram.com/maltepemakers/" title="Maltepe Makers Instagram"><img src="img/instagram.png" width="50" height="50" id="instagram"></img></a></div>
+    </div>
+      <p><a href="http://maltepeanadolu.meb.k12.tr/" id="al" title="Maltepe Anadolu Lisesi Resmi Website">Maltepe Andolu Lisesi</a></p>
+  </footer>
+</body>
+</html>
